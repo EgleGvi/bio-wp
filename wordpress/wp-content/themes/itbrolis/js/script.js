@@ -15,10 +15,18 @@ jQuery( document ).ready(function() {
             }
         }
     })
+    fixHomepageHeader();
     // console.log( "ready!" );
 });
 
+function fixHomepageHeader () {
+    var pathArray = window.location.pathname.split('/');
+    var lastUrlPart = pathArray[pathArray.length - 2];
 
+    if(lastUrlPart == "wordpress") {
+        $(".header-block").addClass("header-block-home");
+    }
+}
 
 // cssmenu Small mobile menu
 ( function( $ ) {

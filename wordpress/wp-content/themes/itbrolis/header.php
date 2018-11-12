@@ -26,8 +26,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<?php wp_head(); ?>
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/owl.theme.default.min.css">
+
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/itbextra.css" media="screen" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -45,7 +44,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="content-padding-right">
-                                    <a href="#" class="cart-shop"><img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/cart.png" alt="<?php bloginfo('name'); ?>">Cart</a>
+                                    <a href="#" class="cart-shop"><img class="cart-shop-img" src="<?php bloginfo('template_directory'); ?>/images/cart.png" alt="<?php bloginfo('name'); ?>">Cart</a>
                                     <ul class="subheader-menu">
                                         <li><a href="#">Login</a></li>
                                         <li><a href="#">Register</a></li>
@@ -60,26 +59,30 @@
             <div class="slider-bottom">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             <a href="#" class="logo-container">
                                 <img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>">
                             </a>
                         </div>
-                        <div class="col-md-8">
-                            <div class="header-menu">
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Events</a></li>
-                                    <li><a href="#">Store Locator</a></li>
-                                    <li><a href="#">Contact us</a></li>
-                                    <li><a href="#">How to Purchase</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="menu-wrapper">
+                            <?php
+                            $args = array(
+                                'container'       => 'div',
+                                'container_class' => '',
+                                'container_id'    => 'main-navigation',
+                                'menu_class'      => '',
+                                'menu_id'         => '',
+                                'theme_location' => 'main_navigation'
+                            );
 
-                    <div class="show-desctop">
+                            wp_nav_menu($args); ?>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--        <div class="show-desctop">
                         <?php
                         $args = array(
                             'container'       => 'div',
@@ -107,9 +110,8 @@
                             wp_nav_menu($args); ?>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                    -->
+
 
     </header>
 

@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/bio-wp.iml" filepath="$PROJECT_DIR$/.idea/bio-wp.iml" />
       <module fileurl="file://$PROJECT_DIR$/../biolatte/.idea/biolatte.iml" filepath="$PROJECT_DIR$/../biolatte/.idea/biolatte.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Paskaitos/javascript/.idea/javascript.iml" filepath="$PROJECT_DIR$/../Paskaitos/javascript/.idea/javascript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Paskaitos/destytojo-failai/keksas/.idea/keksas.iml" filepath="$PROJECT_DIR$/../Paskaitos/destytojo-failai/keksas/.idea/keksas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Paskaitos/namu-darbai-js/.idea/namu-darbai-js.iml" filepath="$PROJECT_DIR$/../Paskaitos/namu-darbai-js/.idea/namu-darbai-js.iml" />
       <module fileurl="file://$PROJECT_DIR$/../vreffect/.idea/vreffect.iml" filepath="$PROJECT_DIR$/../vreffect/.idea/vreffect.iml" />
     </modules>
   </component>

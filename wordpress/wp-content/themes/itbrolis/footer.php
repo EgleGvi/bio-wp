@@ -58,11 +58,6 @@
                 </div>
             </div>
 
-
-            <script src="<?php bloginfo('template_directory'); ?>/js/jquery-3.3.1.min.js"></script>
-            <script src="<?php bloginfo('template_directory'); ?>/js/owl.carousel.min.js"></script>
-
-
         </footer>
 
 	</body>

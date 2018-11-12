@@ -6,5 +6,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="vreffect" />
     <orderEntry type="module" module-name="biolatte" />
+    <orderEntry type="module" module-name="keksas" />
+    <orderEntry type="module" module-name="namu-darbai-js" />
+    <orderEntry type="module" module-name="javascript" />
+    <orderEntry type="module" module-name="keksas" />
   </component>
 </module>

@@ -6,6 +6,328 @@ Author: Egle Gvildyte
 Author URI: http://www.itbrolis.lt/
 */
 
+/* RESET */
+/* ----------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+.clearfix { zoom: 1; }
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+
+
+/* MAIN LAYOUT */
+/* ----------------------------------------- */
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .inputbox {
+  color: #999999;
+  font-size: 12px;
+  line-height: 24px;
+  border-color: #ccc;
+  height: 39px;
+  width: 100%;
+}
+
+html {
+  height:100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  height:100%;
+  min-height: 100%;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-content {
+  flex: 1 0 auto;
+}
+
+a {
+  color: #000000;
+}
+
+a:hover {
+  color: #f14f1d;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Sinkin Sans';
+}
+
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.rte a {
+  color: #f14f1d;
+}
+
+.rte a:hover {
+  color: gray;
+}
+
+iframe {
+  border: none;
+  max-width: 100%!important;
+}
+
+.rte p {
+  margin-bottom: 25px;
+  color: #666666;
+}
+
+.rte div {
+  font-size: 18px;
+  line-height: 24px;
+  color: #333;
+}
+
+.rte a:hover, .rte a:focus, .rte a:visited {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.rte h1 {
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.rte h2 {
+  font-size: 26px;
+  line-height: 32px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.rte h3 {
+  font-size: 30px;
+  line-height: 36px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.rte h4 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.rte h5 {
+  font-size: 23px;
+  line-height: 27px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+.rte img {
+  max-width: 100%;
+}
+
+.rte ul {
+  list-style-type:circle;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+.rte ul {
+  list-style-type:circle;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+.rte ol {
+  list-style-type:decimal;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+.rte ul li,
+.rte ol li {
+  font-size: 16px;
+  line-height: 31px;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.alignleft {
+  float: left;
+  margin: 0em 1em 0.5em 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0em 0 0.5em 1em;
+}
+
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+.rte table tr td,
+.rte table tr th {
+  border: 1px solid #cecece;
+  padding: 5px;
+}
+
+.rte table {
+  margin-bottom: 20px;
+}
+
+.rte img {
+  max-width: 100%;
+  height: auto;
+}
+
+.rte pre {
+  padding: 25px;
+  display: block;
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 26px;
+  word-break: normal;
+  word-wrap: normal;
+  background-color: #ccf1ff;
+  border: 1px solid #9ce4ff;
+  border-radius: 4px;
+  color: #1794c4;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;
+}
+
+
+.show-desctop {
+  display: block !important;
+}
+
+.show-mobile {
+  display: none !important;
+}
+
+blockquote {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  width: 100%;
+  margin: 20px 0;
+  padding: 20px 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #383838;
+}
+
+blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  color: #7a7a7a;
+}
+
+blockquote cite {
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
 .header-menu ul {
   float: right;
   margin-top: 23px;
@@ -26,9 +348,9 @@ Author URI: http://www.itbrolis.lt/
 }
 
 a.logo-container {
-  display: inline-block;
-  padding: 10px 0;
-  max-width: 155px;
+  float: none;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 a.cart-shop {
@@ -45,7 +367,7 @@ a.cart-shop {
 
 .subheader-menu a {
   display: inline-block;
-  padding: 15px 15px;
+  padding: 20px 15px;
   color: #248805;
   text-decoration: none;
 }
@@ -91,6 +413,40 @@ a.cart-shop {
   height: 60px;
 }
 
+.menu-wrapper {
+  float: none;
+}
+
+.menu-wrapper {
+  float: right;
+}
+
+.menu-wrapper ul {
+  padding-left: 0px;
+  margin-bottom: 0px;
+  margin-right: -20px;
+}
+
+.menu-wrapper li {
+  display: inline-block;
+
+  color: #fff;
+}
+
+.menu-wrapper li a {
+  color: #fff;
+  padding: 15px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.menu-wrapper li a:hover {
+  background: #76c38f;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
 .content-padding-right {
   padding-right: 14%;
 }
@@ -101,7 +457,7 @@ a.cart-shop {
 }
 
 a.cart-shop {
-  padding: 15px;
+  padding: 20px;
   position: relative;
   margin-left: 20px;
   color: #248805;
@@ -124,11 +480,15 @@ a.cart-shop:before {
   left: -10px;
 }
 
-.header-block {
+.header-block-home {
   position: absolute;
+}
+
+.header-block {
   top: 0px;
   width: 100%;
-  background: #ffffffb3;
+  height: 200px;
+  background: rgba(190, 193, 199, 0.19);
   z-index: 40;
 }
 
@@ -148,16 +508,22 @@ span {
 
 button.owl-prev {
   position: absolute;
-  left: 40px;
-  top: 200px;
+  left: 70px;
+  top: 290px;
   outline: none;
 }
 
 button.owl-next {
   position: absolute;
-  right: 40px;
-  top: 200px;
+  right: 70px;
+  top: 290px;
   outline: none;
+}
+
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  color: white;
+  font-size: 90px;
 }
 
 .owl-theme .owl-nav [class*=owl-]:hover {
@@ -269,7 +635,7 @@ button.owl-next {
 .wrapper {
   float: left;
   padding: 35px 70px;
-  margin: 15px;
+  margin: 10px;
   position: relative;
 }
 
@@ -294,7 +660,7 @@ button.owl-next {
   height: 140px;
   position: absolute;
   top: 75px;
-  right: 380px;
+  right: 405px;
 }
 
 .vl2 {
@@ -302,7 +668,7 @@ button.owl-next {
   height: 140px;
   position: absolute;
   top: 75px;
-  right: 760px;
+  right: 780px;
 }
 
 .fb-page img {
@@ -408,20 +774,29 @@ i {
 .footer-icon {
   font-size: 27px;
   position: absolute;
-  left: 330px;
-  bottom: 13px;
+  left: 340px;
+  bottom: 4px;
   color: #248805;
 }
 
-.banner-wrapper {
-  background-image: url(images/banner.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 85px;
-  border-top: 4px solid white;
-  position: relative;
-  top:237px;
-  box-shadow: 0px 8px 5px grey;
+a.banner-store1 {
+  text-decoration: none;
+  color: white;
+  z-index: 40;
+  position: absolute;
+  top: 16px;
+}
+
+a.banner-store2 {
+  background-color: #4f7500;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 15px 55px;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 16px;
+  margin-left: 90px;
 }
 
 .banner-store1, .banner-store2 {
@@ -447,7 +822,7 @@ a.banner-store1, a.banner-store2:hover {
   color: white;
   font-size: 20px;
   position: absolute;
-  top: -223px;
+  top: 28px;
   padding: 5px 10px;
   margin-left: 40px;
 }
@@ -460,7 +835,6 @@ a.banner-store1, a.banner-store2:hover {
 .wrapper-all {
   height: auto;
 }
-
 
 /*
   #cssmenu ul ul li a {
